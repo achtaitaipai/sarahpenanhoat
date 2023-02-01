@@ -1,0 +1,67 @@
+.project-card {
+  display: grid;
+  align-items: space-evenly;
+  padding-block: var(--size-9);
+  padding-inline: var(--padding-x);
+  gap: var(--size-4);
+}
+
+.project-card:not(:last-child) {
+  border-bottom: var(--dashed-border);
+}
+
+.project-card .description {
+  display: grid;
+  height: 100%;
+  gap: var(--size-6);
+  align-items: space-between;
+  & h2 {
+    text-align: center;
+  }
+  & em {
+    text-align: right;
+  }
+  & button {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    display: grid;
+    place-items: center;
+    height: 2.5rem;
+  }
+}
+
+.project-card img {
+  margin: auto;
+  height: 60vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 68em) {
+  .project-card {
+    grid-template-columns: 4fr 3fr;
+    text-align: left;
+  }
+
+  .project-card:nth-child(2n) {
+    grid-template-columns: 3fr 4fr;
+    & .description {
+      grid-row: 1;
+      text-align: right;
+    }
+    & img {
+      grid-column: -2;
+    }
+  }
+
+  .project-card .description {
+    & h2,
+    & em {
+      text-align: inherit;
+    }
+    & button {
+      border: var(--dashed-border);
+    }
+  }
+}

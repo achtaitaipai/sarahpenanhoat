@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Sarah Penanhoat | {{title}}</title>
+</head>
+<body>
+	<header>
+		<h1>
+			<a href="/">Sarah Penanhoat</a>
+		</h1>
+		<nav>
+			<ul class="nav">
+				<li><a href="/" class="nav-item">Projets</a></li>
+				<li><button class="nav-item">Actualités</button></li>
+				<li><a href="/infos" class="nav-item">Infos</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="{{title}}">
+		@!section('content')
+	</main>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

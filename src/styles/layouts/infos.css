@@ -1,0 +1,18 @@
+.infos {
+  height: 100%;
+  display: grid;
+  text-align: left;
+  align-items: center;
+  padding-inline: var(--padding-x);
+  gap: var(--size-4);
+  & img {
+    margin: auto;
+    width: 100%;
+  }
+}
+
+@media (min-width: 56em) {
+  .infos {
+    grid-template-columns: 3fr 4fr;
+  }
+}
