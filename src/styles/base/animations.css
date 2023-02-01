@@ -1,0 +1,12 @@
+
+@keyframes pulse {
+    50% {
+      transform: scale(0.9);
+    }
+  }
+
+  @keyframes bounce-right {
+    50% {
+      transform: translateX(1rem);
+    }
+  }

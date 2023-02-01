@@ -1,6 +1,7 @@
 import 'viewerjs/dist/viewer.css'
 import Viewer from "viewerjs";
-export default class ImageGallery extends HTMLElement {
+
+export class ImageGallery extends HTMLElement {
     private _viewer?:Viewer
 
 

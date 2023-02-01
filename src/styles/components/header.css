@@ -51,6 +51,9 @@ header h1 a {
   font-weight: 900;
   font-size: 1.5rem;
   cursor: pointer;
+  &:where(:hover,:focus-within){
+    animation : pulse .3s;
+  }
 }
 
 @media (min-width: 56em) {

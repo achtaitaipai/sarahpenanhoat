@@ -7,7 +7,7 @@
 }
 
 .project-card:not(:last-child) {
-  border-bottom: var(--dashed-border);
+  /* border-bottom: var(--dashed-border); */
 }
 
 .project-card .description {
@@ -35,7 +35,24 @@
   height: 60vh;
   width: 100%;
   object-fit: cover;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition:clip-path .3s .4s ease-in;
 }
+
+.not-visible.project-card{
+  & img{
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+  }
+}
+
+
+/*
+
+    from{
+    }
+    to{
+    }
+*/
 
 @media (min-width: 68em) {
   .project-card {
@@ -49,8 +66,10 @@
       text-align: inherit;
     }
     & a {
-      /* border: var(--dashed-border); */
       justify-items: flex-start;
+      &:where(:hover,:focus-within){
+        animation:bounce-right .3s;
+      }
     }
   }
 
