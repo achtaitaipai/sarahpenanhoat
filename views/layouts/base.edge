@@ -9,19 +9,29 @@
 <body>
 	<header>
 		<h1>
-			<a href="/">Sarah Penanhoat</a>
+			<a href="/" ariane-router>Sarah Penanhoat</a>
+			<span>*</span>
 		</h1>
 		<nav>
-			<ul class="nav">
-				<li><a href="/" class="nav-item">Projets</a></li>
-				<li><button class="nav-item">Actualités</button></li>
-				<li><a href="/infos" class="nav-item">Infos</a></li>
+			<ul class="nav" style="--curent-item: {{title==="infos" ? 2 : 0}};">
+				<li><a href="/" class="nav-item" ariane-router>Projets</a></li>
+				<li><button class="nav-item" id="actuBtn">Actualités</button></li>
+				<li><a href="/infos" class="nav-item" ariane-router>Infos</a></li>
 			</ul>
 		</nav>
 	</header>
-	<main class="{{title}}">
 		@!section('content')
-	</main>
+		<dialog id="actuWindow" class="actus" aria-label="close">
+			<div class="wrapper">
+				<button class="close-btn" id="close-actus">X</button>
+				<h2>Actualités</h2>
+				<em>du 16-02-2023 au 28-03-2023</em>
+				<picture>
+					<img src="/images/crocos-thumbnail.jpg" alt="">
+				</picture>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nostrum corporis eligendi labore voluptate quaerat commodi quo, odit obcaecati. Ipsum dolor soluta dolorem! Repellat aut quaerat beatae dolorum accusantium veritatis.</p>
+			</div>
+		</dialog>
     <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

@@ -16,5 +16,12 @@ export const routes = (): Route[] => {
         title: "infos",
       },
     },
+    {
+      url: "/projet",
+      template: "projet",
+      data: {
+        title: "projet",
+      },
+    },
   ];
 };

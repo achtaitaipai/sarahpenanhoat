@@ -9,6 +9,7 @@ header {
   justify-content: center;
   color: var(--clr-primary-12);
   width: 100%;
+  z-index: 10;
 }
 
 header h1 a {
@@ -29,12 +30,13 @@ header h1 a {
   content: "";
   position: absolute;
   left: calc((var(--item-fullwidth) - var(--item-width)) / 2);
-  transform: translateX(calc(var(--item-fullwidth) * 2));
+  transform: translateX(calc(var(--item-fullwidth) * var(--curent-item)));
   top: 0;
   bottom: 0;
   width: var(--item-width);
   border: var(--dashed-border);
   pointer-events: none;
+  transition:transform .3s var(--ease-elastic-4);
 }
 
 .nav-item {

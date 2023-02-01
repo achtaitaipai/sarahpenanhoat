@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@fontsource/archivo-narrow": "^4.5.12",
+    "ariane-router": "^0.0.1",
+    "viewerjs": "^1.11.2",
     "vite-plugin-dedale": "^0.0.14"
   }
 }

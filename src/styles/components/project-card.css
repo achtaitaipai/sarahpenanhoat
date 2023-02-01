@@ -21,10 +21,9 @@
   & em {
     text-align: right;
   }
-  & button {
+  & a {
     background-color: transparent;
     cursor: pointer;
-    border: 0;
     display: grid;
     place-items: center;
     height: 2.5rem;
@@ -44,6 +43,17 @@
     text-align: left;
   }
 
+  .project-card .description {
+    & h2,
+    & em {
+      text-align: inherit;
+    }
+    & a {
+      /* border: var(--dashed-border); */
+      justify-items: flex-start;
+    }
+  }
+
   .project-card:nth-child(2n) {
     grid-template-columns: 3fr 4fr;
     & .description {
@@ -53,15 +63,10 @@
     & img {
       grid-column: -2;
     }
+
+    & a {
+      justify-items: flex-end;
+    }
   }
 
-  .project-card .description {
-    & h2,
-    & em {
-      text-align: inherit;
-    }
-    & button {
-      border: var(--dashed-border);
-    }
-  }
 }

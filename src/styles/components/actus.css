@@ -1,0 +1,47 @@
+.actus {
+    max-width:40em;
+    padding: 0;
+    background: white;
+    border:var(--dashed-border);
+    animation: .2s ease-out 0s both appear;
+    & .wrapper{
+        position: relative;
+        display:grid;
+        place-items:center;
+        padding:var(--size-3) var(--size-5);
+    }
+    & picture{
+        width:100%;
+        height:50vh;
+    }
+
+    & img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+    & .close-btn{
+        font-family:var(--font-display);
+        font-weight:900;
+        font-size:3rem;
+        position: absolute;
+        right: var(--size-2);
+        top: var(--size-2);
+        background: transparent;
+        cursor: pointer;
+        border:0;
+        padding: 0;
+        line-height:1;
+
+    }
+}
+
+@keyframes appear {
+    from{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    }
+    to{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+}

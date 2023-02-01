@@ -3,5 +3,7 @@
 @import "./global/typographie.css";
 @import "./global/layout.css";
 @import "./layouts/infos.css";
+@import "./layouts/project.css";
 @import "./components/header.css";
 @import "./components/project-card.css";
+@import "./components/actus.css";
