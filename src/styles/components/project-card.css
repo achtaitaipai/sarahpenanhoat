@@ -4,6 +4,9 @@
   padding-block: var(--size-9);
   padding-inline: var(--padding-x);
   gap: var(--size-4);
+  text-decoration: none;
+  color: var(--clr-primary-9);
+  margin-block: var(--size-6);
 }
 
 observable-wrapper:not(:last-child) .project-card {
@@ -17,15 +20,24 @@ observable-wrapper:not(:last-child) .project-card {
   align-items: space-between;
   & h2 {
     text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s 0.2s ease-out;
+    transform: scaleY(1);
+  }
+  & h2 span {
+    display: inline-block;
+    transition: transform 0.3s 0.2s ease-out;
+    transform: translateY(0%);
   }
   & em {
     text-align: right;
   }
-  & a {
-    background-color: transparent;
-    cursor: pointer;
-    display: grid;
-    place-items: center;
+  & :where(p, em) {
+    opacity: 1;
+    transition: opacity 0.4s 0.2s ease-out;
+  }
+  & svg {
+    margin: auto;
     height: 2.5rem;
   }
 }
@@ -36,12 +48,30 @@ observable-wrapper:not(:last-child) .project-card {
   width: 100%;
   object-fit: cover;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  transition: clip-path 0.3s 0.2s ease-in;
+  transition: clip-path 0.5s var(--ease-out), transform 0.2s ease-in;
 }
 
 .not-visible.project-card {
   & img {
-    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  & h2 {
+    transform: scaleY(0);
+  }
+  & h2 span {
+    transform: translateY(-100%);
+  }
+  & :where(p, em) {
+    opacity: 0;
+  }
+}
+
+.project-card:where(:hover, :focus-within) {
+  & img {
+    animation: bounce-top 0.3s;
+  }
+  & svg {
+    transform: translateX(var(--size-2));
   }
 }
 
@@ -56,14 +86,11 @@ observable-wrapper:not(:last-child) .project-card {
     & em {
       text-align: inherit;
     }
-    & a {
-      justify-items: flex-start;
-      &:where(:hover, :focus-within) {
-        animation: bounce-right 0.3s;
-      }
+    & svg {
+      margin: 0;
+      transition: transform 0.2s ease-in;
     }
   }
-
   observable-wrapper:nth-child(2n) .project-card {
     grid-template-columns: 3fr 4fr;
     & .description {
@@ -74,8 +101,8 @@ observable-wrapper:not(:last-child) .project-card {
       grid-column: -2;
     }
 
-    & a {
-      justify-items: flex-end;
+    & svg {
+      justify-self: flex-end;
     }
   }
 }
