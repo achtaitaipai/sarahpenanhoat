@@ -10,14 +10,14 @@ export const routes = (): Route[] => {
       },
     },
     {
-      url: "/infos",
+      url: "/infos/",
       template: "infos",
       data: {
         title: "infos",
       },
     },
     {
-      url: "/projet",
+      url: "/projet/",
       template: "projet",
       data: {
         title: "projet",
