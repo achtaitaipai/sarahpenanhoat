@@ -6,8 +6,8 @@
   gap: var(--size-4);
 }
 
-.project-card:not(:last-child) {
-  /* border-bottom: var(--dashed-border); */
+observable-wrapper:not(:last-child) .project-card {
+  border-bottom: var(--dashed-border);
 }
 
 .project-card .description {
@@ -36,23 +36,14 @@
   width: 100%;
   object-fit: cover;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-  transition:clip-path .3s .4s ease-in;
+  transition: clip-path 0.3s 0.2s ease-in;
 }
 
-.not-visible.project-card{
-  & img{
+.not-visible.project-card {
+  & img {
     clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
   }
 }
-
-
-/*
-
-    from{
-    }
-    to{
-    }
-*/
 
 @media (min-width: 68em) {
   .project-card {
@@ -67,13 +58,13 @@
     }
     & a {
       justify-items: flex-start;
-      &:where(:hover,:focus-within){
-        animation:bounce-right .3s;
+      &:where(:hover, :focus-within) {
+        animation: bounce-right 0.3s;
       }
     }
   }
 
-  .project-card:nth-child(2n) {
+  observable-wrapper:nth-child(2n) .project-card {
     grid-template-columns: 3fr 4fr;
     & .description {
       grid-row: 1;
@@ -87,5 +78,4 @@
       justify-items: flex-end;
     }
   }
-
 }

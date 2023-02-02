@@ -15,4 +15,6 @@ export default defineConfig({
       routes: routes(),
     }),
   ],
+
+  base: "/sarahpenanhoat/",
 });
