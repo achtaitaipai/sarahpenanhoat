@@ -1,33 +1,39 @@
 .cover {
   width: 100%;
-  padding-inline: var(--size-7);
+  padding: var(--size-7);
+  gap: var(--size-4);
+  display: grid;
+  position: relative;
   & picture {
     width: 100%;
     display: block;
-    height: 80vh;
   }
   & img {
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     height: 100%;
   }
 }
 
 .text {
-  padding-inline: var(--size-7);
+  overflow-y: auto;
+  & h2 {
+    line-height: 1;
+    margin-bottom: var(--size-3);
+  }
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 18rem);
-  gap: var(--size-4);
-  justify-content: space-around;
+  grid-template-columns: repeat(auto-fill, clamp(15em, 30%, 18em));
+  gap: var(--size-8) var(--size-3);
+  justify-content: space-evenly;
   padding-block: var(--size-4);
   margin-block: var(--size-4);
   padding-inline: var(--size-7);
   border-top: var(--dashed-border);
   & picture {
-    height: 18rem;
+    height: 15rem;
     cursor: zoom-in;
   }
   & img {
@@ -47,5 +53,21 @@ footer {
   }
   & .next {
     float: right;
+  }
+}
+
+@media (min-width: 60em) {
+  .cover {
+    grid-template-columns: 60% 1fr;
+    & picture {
+      position: sticky;
+      --header-height: 5.625rem;
+      --padding-y: var(--size-6);
+      top: calc(var(--header-height) + var(--padding-y));
+      height: calc(100vh - (2 * var(--padding-y) + var(--header-height)));
+    }
+    & img {
+      object-fit: cover;
+    }
   }
 }

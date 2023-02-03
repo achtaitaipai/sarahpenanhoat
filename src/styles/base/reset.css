@@ -21,15 +21,15 @@ dd {
 
 /* Set core root defaults */
 html {
-  scroll-behavior: smooth;
-  scroll-gutter:stable;
+  /* scroll-behavior: smooth; */
+  scroll-gutter: stable;
 }
 
 /* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  scroll-gutter:stable;
+  scroll-gutter: stable;
 }
 
 /* Make images easier to work with */
