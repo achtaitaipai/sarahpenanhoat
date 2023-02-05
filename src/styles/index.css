@@ -1,6 +1,7 @@
 @import "./base/variables.css";
 @import "./base/animations.css";
 @import "./base/reset.css";
+@import "./base/utils.css";
 @import "./global/typographie.css";
 @import "./global/layout.css";
 @import "./layouts/infos.css";

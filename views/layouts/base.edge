@@ -9,7 +9,11 @@
 <body>
 	<header>
 		<h1>
-			<a href="{{base}}/" ariane-router>Sarah Penanhoat</a>
+			<a href="{{base}}/" ariane-router>
+				@!component('components/letters',{
+					text:"Sarah Penanhoat"
+				})
+			</a>
 		</h1>
 		<nav>
 			<ul class="nav" style="--curent-item: {{title==="infos" ? 2 : 0}};">

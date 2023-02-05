@@ -1,0 +1,5 @@
+<span class="letters">
+@each((letter,index) in text)~
+<span class="letter" style="--n-letter:{{index}}">{{{letter===" " ? '&nbsp;' : letter}}}</span>
+@end~
+</span>

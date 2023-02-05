@@ -22,18 +22,20 @@ observable-wrapper:not(:last-child) .project-card {
     line-height: 1;
     text-align: center;
     overflow: hidden;
-    transition: transform 0.3s 0.2s ease-out;
-    transform: scaleY(1);
   }
-
-  & h2 span {
+  & h2 .letters {
     position: relative;
     display: inline-block;
-    transition: transform 0.3s 0.2s ease-out;
-    transform: translateY(0%);
     padding-bottom: var(--size-2);
   }
-  & h2 span::after {
+
+  & h2 .letter {
+    position: relative;
+    transition: transform 0.2s ease-out;
+    transition-delay: calc(0.1s + 0.02s * var(--n-letter));
+    transform: scaleY(1) translateY(0%);
+  }
+  & h2 .letters::after {
     content: "";
     opacity: 0;
     position: absolute;
@@ -72,11 +74,8 @@ observable-wrapper:not(:last-child) .project-card {
   & img {
     clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   }
-  & h2 {
-    transform: scaleY(0);
-  }
-  & h2 span {
-    transform: translateY(-100%);
+  & h2 .letter {
+    transform: scaleY(0) translateY(-100%);
   }
   & :where(p, em) {
     opacity: 0;
@@ -90,7 +89,7 @@ observable-wrapper:not(:last-child) .project-card {
   & svg {
     transform: translateX(var(--size-2));
   }
-  & h2 span::after {
+  & h2 .letters::after {
     transform: scaleX(1);
     opacity: 1;
   }
