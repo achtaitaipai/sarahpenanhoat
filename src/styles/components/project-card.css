@@ -9,7 +9,7 @@
   margin-block: var(--size-6);
 }
 
-observable-wrapper:not(:last-child) .project-card {
+.project-card:not(:last-child) {
   border-bottom: var(--dashed-border);
 }
 
@@ -70,14 +70,14 @@ observable-wrapper:not(:last-child) .project-card {
   transition: clip-path 0.5s var(--ease-out), transform 0.2s ease-in;
 }
 
-.not-visible.project-card {
-  & img {
+.project-card {
+  & .not-visible img {
     clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
   }
-  & h2 .letter {
+  & .not-visible h2 .letter {
     transform: scaleY(0) translateY(-100%);
   }
-  & :where(p, em) {
+  & .not-visible :where(p, em) {
     opacity: 0;
   }
 }
@@ -111,13 +111,13 @@ observable-wrapper:not(:last-child) .project-card {
       transition: transform 0.2s ease-in;
     }
   }
-  observable-wrapper:nth-child(2n) .project-card {
+  .project-card:nth-child(2n) {
     grid-template-columns: 3fr 4fr;
     & .description {
       grid-row: 1;
       text-align: right;
     }
-    & img {
+    & picture {
       grid-column: -2;
     }
 

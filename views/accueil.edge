@@ -3,10 +3,11 @@
 @section('content')
 	<main>
 
-		<observable-wrapper>
-			<a href="{{base}}/projet/" class="project-card" anim-onscroll ariane-before="slideToLeft" ariane-between="slideFromRight">
-				<img src="/images/geant-thumbnail.jpg" alt="">
-				<div class="description">
+			<a href="{{base}}/projet/" is="observable-wrapper" class="project-card"  ariane-before="slideToLeft" ariane-between="slideFromRight">
+				<picture anim-onscroll>
+					<img src="/images/geant-thumbnail.jpg" alt="">
+				</picture>
+				<div class="description" anim-onscroll>
 				<h2>
 					@!component('components/letters',{
 						text:'Les géant·e·s'
@@ -19,12 +20,12 @@
 					</svg>
 				</div>
 			</a>
-		</observable-wrapper>
 		
-		<observable-wrapper>
-			<a href="{{base}}/projet/" class="project-card" anim-onscroll ariane-before="slideToLeft" ariane-between="slideFromRight">
-				<img src="/images/crocos-thumbnail.jpg" alt="">
-				<div class="description">
+			<a href="{{base}}/projet/" is="observable-wrapper" class="project-card" anim-onscroll ariane-before="slideToLeft" ariane-between="slideFromRight">
+				<picture anim-onscroll>
+					<img src="/images/crocos-thumbnail.jpg" alt="">
+				</picture>
+				<div class="description" anim-onscroll>
 					<h2>
 						@!component('components/letters',{
 							text:"Et il n’en restera qu’un"
@@ -38,12 +39,12 @@
 						</svg>
 				</div>
 			</a>
-		</observable-wrapper>
 
-		<observable-wrapper>
-			<a href="{{base}}/projet/" class="project-card" anim-onscroll ariane-before="slideToLeft" ariane-between="slideFromRight">
-				<img src="/images/geant-thumbnail.jpg" alt="">
-				<div class="description">
+			<a href="{{base}}/projet/" is="observable-wrapper" class="project-card" anim-onscroll ariane-before="slideToLeft" ariane-between="slideFromRight">
+				<picture anim-onscroll>
+					<img src="/images/geant-thumbnail.jpg" alt="">
+				</picture>
+				<div class="description" anim-onscroll>
 					<h2>
 						@!component('components/letters',{
 							text:'Les géant·e·s'
@@ -58,13 +59,13 @@
 						</svg>
 				</div>
 			</a>
-		</observable-wrapper>
 
 			
-		<observable-wrapper>
-			<a href="{{base}}/projet/" class="project-card" anim-onscroll ariane-before="slideToLeft" ariane-between="slideFromRight">
-				<img src="/images/crocos-thumbnail.jpg" alt="">
-				<div class="description">
+			<a href="{{base}}/projet/" is="observable-wrapper" class="project-card" anim-onscroll ariane-before="slideToLeft" ariane-between="slideFromRight">
+				<picture anim-onscroll>
+					<img src="/images/crocos-thumbnail.jpg" width="500" alt="" >
+				</picture>
+				<div class="description" anim-onscroll>
 					<h2>
 						@!component('components/letters',{
 							text:"Et il n’en restera qu’un"
@@ -78,7 +79,6 @@
 						</svg>
 				</div>
 			</a>
-		</observable-wrapper>
 
 	</main>
 @end
