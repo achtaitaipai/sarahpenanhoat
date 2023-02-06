@@ -1,4 +1,4 @@
-export class ObserbleWrapper extends HTMLAnchorElement {
+export class ProjectCard extends HTMLAnchorElement {
   static _observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entrie) => {
@@ -18,7 +18,7 @@ export class ObserbleWrapper extends HTMLAnchorElement {
     if ("IntersectionObserver" in window) {
       this._observables = this.querySelectorAll<HTMLElement>("[anim-onscroll]");
       this._observables.forEach((observable) => {
-        ObserbleWrapper._observer.observe(observable);
+        ProjectCard._observer.observe(observable);
         observable.classList.add("not-visible");
       });
     }
@@ -26,7 +26,7 @@ export class ObserbleWrapper extends HTMLAnchorElement {
 
   disconnectedCallback() {
     this._observables?.forEach((observable) => {
-      ObserbleWrapper._observer.unobserve(observable);
+      ProjectCard._observer.unobserve(observable);
     });
   }
 }

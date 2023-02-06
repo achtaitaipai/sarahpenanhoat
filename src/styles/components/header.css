@@ -2,14 +2,17 @@ header {
   position: sticky;
   background-color: var(--clr-surface-1);
   top: 0;
+  color: var(--clr-primary-12);
+  z-index: 10;
+  width: 100%;
+}
+.header-wrapper {
+  width: var(--size-fluid-2);
+  margin: auto;
   display: flex;
   flex-direction: column;
-  padding-inline: var(--size-7);
   align-items: center;
   justify-content: center;
-  color: var(--clr-primary-12);
-  width: 100%;
-  z-index: 10;
 }
 
 header h1 a {
@@ -62,7 +65,7 @@ header h1 a:hover .letter {
 }
 
 @media (min-width: 56em) {
-  header {
+  .header-wrapper {
     flex-direction: row;
     justify-content: space-between;
   }

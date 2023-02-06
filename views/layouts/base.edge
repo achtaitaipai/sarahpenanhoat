@@ -8,20 +8,22 @@
 </head>
 <body>
 	<header>
-		<h1>
-			<a href="{{base}}/" ariane-router>
-				@!component('components/letters',{
-					text:"Sarah Penanhoat"
-				})
-			</a>
-		</h1>
-		<nav>
-			<ul class="nav" style="--curent-item: {{title==="infos" ? 2 : 0}};">
-				<li><a href="{{base}}/" class="nav-item" ariane-router>Projets</a></li>
-				<li><button class="nav-item" id="actuBtn">Actualités</button></li>
-				<li><a href="{{base}}/infos/" class="nav-item" ariane-router>Infos</a></li>
-			</ul>
-		</nav>
+		<div class="header-wrapper">
+			<h1>
+				<a href="{{base}}/" ariane-router>
+					@!component('components/letters',{
+						text:"Sarah Penanhoat"
+					})
+				</a>
+			</h1>
+			<nav>
+				<ul class="nav" style="--curent-item: {{title==="infos" ? 2 : 0}};">
+					<li><a href="{{base}}/" class="nav-item" ariane-router>Projets</a></li>
+					<li><button class="nav-item" id="actuBtn">Actualités</button></li>
+					<li><a href="{{base}}/infos/" class="nav-item" ariane-router>Infos</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 		@!section('content')
 		<dialog id="actuWindow" class="actus" aria-label="close">
@@ -35,6 +37,6 @@
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nostrum corporis eligendi labore voluptate quaerat commodi quo, odit obcaecati. Ipsum dolor soluta dolorem! Repellat aut quaerat beatae dolorum accusantium veritatis.</p>
 			</div>
 		</dialog>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/scripts/index.ts"></script>
 </body>
 </html>
