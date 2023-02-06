@@ -1,5 +1,6 @@
 import "../styles/index.css";
 import "@fontsource/archivo-narrow";
+import "@fontsource/archivo-narrow/700.css";
 import { ImageGallery } from "./ImageGallery";
 import { initPageTransition } from "./pageTransitions";
 import { initActuWindow } from "./actuWindow";
