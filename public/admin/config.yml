@@ -13,6 +13,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Titre", name: "title", widget: "string"}
       - {label: "Légende", name: "legende", widget: "string"}
+      - {label: "Résumé", name: "resume", widget: "string"}
       - {label: "Date de publication", name: "date", widget: "datetime"}
       - {label: "Image de couverture", name: "thumbnail", widget: "image"}
       - {label: "Galerie d'images", name: "gallery", widget: "list", field: {label: Image, name: image, widget: image}}
