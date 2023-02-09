@@ -15,5 +15,5 @@ collections:
       - {label: "Légende", name: "legende", widget: "string"}
       - {label: "Date de publication", name: "date", widget: "datetime"}
       - {label: "Image de couverture", name: "thumbnail", widget: "image"}
-      - {label: "Texte", name: "body", widget: "markdown"}
       - {label: "Galerie d'images", name: "gallery", widget: "list", field: {label: Image, name: image, widget: image}}
+      - {label: "Body", name: "body", widget: "markdown"}
