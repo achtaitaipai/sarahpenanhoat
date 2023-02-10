@@ -1,4 +1,4 @@
-import { Route } from "vite-plugin-dedale";
+import { loadMdFile, Route } from "vite-plugin-dedale";
 import {loadAllMdFilesFrom} from "vite-plugin-dedale"
 
 type ProjectFrontmatter = {
@@ -10,9 +10,13 @@ type ProjectFrontmatter = {
   date:string
 }
 
+type infosFrontmatter = {
+  thumbnail:string
+}
+
 const projects = loadAllMdFilesFrom<ProjectFrontmatter>('content/projets')
 
-const projectsRoutes = projects.map((p)=>({
+const projectsRoutes = loadAllMdFilesFrom<ProjectFrontmatter>('content/projets').map((p)=>({
   url:encodeURI('/projets/'+p.filename.replace('.md','')+'/'),
   template:"projet",
   data:{
@@ -20,6 +24,8 @@ const projectsRoutes = projects.map((p)=>({
     content:p.content
   }
 }))satisfies Route[]
+
+const infosPage = loadMdFile<infosFrontmatter>('content/infos.md')
 
 export const routes = (): Route[] => {
   return [
@@ -36,6 +42,7 @@ export const routes = (): Route[] => {
       template: "infos",
       data: {
         title: "infos",
+        ...infosPage
       },
     },
     ...projectsRoutes
