@@ -26,6 +26,7 @@ const projectsRoutes = loadAllMdFilesFrom<ProjectFrontmatter>('content/projets')
   data:{
     frontmatter:p.frontmatter,
     content:p.content,
+    title: p.frontmatter.title,
     index
   }
 }))satisfies Route[]
