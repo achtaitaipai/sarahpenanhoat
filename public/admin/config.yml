@@ -31,4 +31,17 @@ collections:
         fields:
           - {label: "Image de couverture", name: "thumbnail", widget: "image"}
           - {label: "Body", name: "body", widget: "markdown"}
+  - name: "actualites" # Used in routes, e.g., /admin/collections/blog
+    label: "actualites" # Used in the UI
+    editor: 
+      preview: false
+    files:
+      - label: "Actualites Page"
+        name: "actualites"
+        file: "content/actualites.md"
+        fields:
+          - {label: "Actif", name: "activ", widget: "boolean", default: true}
+          - {label: "Image de couverture", name: "thumbnail", widget: "image"}
+          - {label: "Legende", name: "legende", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
         
