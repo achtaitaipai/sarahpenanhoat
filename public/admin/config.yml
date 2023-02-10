@@ -27,7 +27,8 @@ collections:
     files:
       - label: "Infos Page"
         name: "infos"
-        file: "site/content/infos.md"
+        file: "content/infos.md"
         fields:
+          - {label: "Image de couverture", name: "thumbnail", widget: "image"}
           - {label: "Body", name: "body", widget: "markdown"}
         
