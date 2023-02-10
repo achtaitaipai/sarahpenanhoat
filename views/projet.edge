@@ -4,58 +4,27 @@
 <main class="project">
     <section class="cover">
         <picture>
-            <img src="/images/geants/img0.jpg" alt="">
+            <img src="{{frontmatter.thumbnail}}" alt="">
         </picture>
         <div class="text">
-            <h2>Les géant·e·s</h2>
-            <em>2020, Faïence émaillée</em>
-            <p>Dans le cadre de Création en Cours, projet porté par les Ateliers Médicis, le projet des Géant.e.s s'est déssiné. Pendant six mois, avec trente enfants, nous avons travaillé la terre et le pain.</p>
-            <p>"Il n'y a pas de projet plus simple que celui des Géant.e.s. Après la présentation du Géant de Zeralda, on parlera de nourriture. En s'inspirant des personnages de l'oeuvre présentée, les enfants seront premièrement créateurs : d'abord ils dessineront les plats de leur choix, puis les façonneront en argile. Les sculptures seront cuites, émaillées et recuites. Deuxièmement, ils seront cuisiniers, où, d'après l'oeuvre créée en amont, on façonnera nos plats en pâte a pain. Comme avec de la pâte à modeler, on pourra tout représenter : viande, fruits, etc. Et le rendu final sera un buffet où il y aura les céramiques ersatz de plats, les pains et les boissons à partager entre les élèves, les professeurs et les visiteurs."</p>
-            <p>"Il n'y a pas de projet plus simple que celui des Géant.e.s. Après la présentation du Géant de Zeralda, on parlera de nourriture. En s'inspirant des personnages de l'oeuvre présentée, les enfants seront premièrement créateurs : d'abord ils dessineront les plats de leur choix, puis les façonneront en argile. Les sculptures seront cuites, émaillées et recuites. Deuxièmement, ils seront cuisiniers, où, d'après l'oeuvre créée en amont, on façonnera nos plats en pâte a pain. Comme avec de la pâte à modeler, on pourra tout représenter : viande, fruits, etc. Et le rendu final sera un buffet où il y aura les céramiques ersatz de plats, les pains et les boissons à partager entre les élèves, les professeurs et les visiteurs."</p>
-            <p>"Il n'y a pas de projet plus simple que celui des Géant.e.s. Après la présentation du Géant de Zeralda, on parlera de nourriture. En s'inspirant des personnages de l'oeuvre présentée, les enfants seront premièrement créateurs : d'abord ils dessineront les plats de leur choix, puis les façonneront en argile. Les sculptures seront cuites, émaillées et recuites. Deuxièmement, ils seront cuisiniers, où, d'après l'oeuvre créée en amont, on façonnera nos plats en pâte a pain. Comme avec de la pâte à modeler, on pourra tout représenter : viande, fruits, etc. Et le rendu final sera un buffet où il y aura les céramiques ersatz de plats, les pains et les boissons à partager entre les élèves, les professeurs et les visiteurs."</p>
-            <p>"Il n'y a pas de projet plus simple que celui des Géant.e.s. Après la présentation du Géant de Zeralda, on parlera de nourriture. En s'inspirant des personnages de l'oeuvre présentée, les enfants seront premièrement créateurs : d'abord ils dessineront les plats de leur choix, puis les façonneront en argile. Les sculptures seront cuites, émaillées et recuites. Deuxièmement, ils seront cuisiniers, où, d'après l'oeuvre créée en amont, on façonnera nos plats en pâte a pain. Comme avec de la pâte à modeler, on pourra tout représenter : viande, fruits, etc. Et le rendu final sera un buffet où il y aura les céramiques ersatz de plats, les pains et les boissons à partager entre les élèves, les professeurs et les visiteurs."</p>
-            <p>"Il n'y a pas de projet plus simple que celui des Géant.e.s. Après la présentation du Géant de Zeralda, on parlera de nourriture. En s'inspirant des personnages de l'oeuvre présentée, les enfants seront premièrement créateurs : d'abord ils dessineront les plats de leur choix, puis les façonneront en argile. Les sculptures seront cuites, émaillées et recuites. Deuxièmement, ils seront cuisiniers, où, d'après l'oeuvre créée en amont, on façonnera nos plats en pâte a pain. Comme avec de la pâte à modeler, on pourra tout représenter : viande, fruits, etc. Et le rendu final sera un buffet où il y aura les céramiques ersatz de plats, les pains et les boissons à partager entre les élèves, les professeurs et les visiteurs."</p>
+            <h2>{{frontmatter.title}}</h2>
+            <em>{{frontmatter.legende}}</em>
+            {{{content}}}
         </div>
     </section>
     <hr>
     <div class="grid" is="image-gallery">
-        <picture>
-            <img src="/images/geants/img0.jpg">
-        </picture>
-        <picture>
-            <img src="/images/geants/img1.jpg">
-        </picture>
-        <picture>
-            <img src="/images/geants/img2.jpg">
-        </picture>
-        <picture>
-            <img src="/images/geants/img0.jpg">
-        </picture>
-        <picture>
-            <img src="/images/geants/img1.jpg">
-        </picture>
-        <picture>
-            <img src="/images/geants/img2.jpg">
-        </picture>
+        @each(img in frontmatter.gallery)
+            <picture>
+                <img src="{{img}}">
+            </picture>
+        @end
         <ul>
-            <li>
-                <img src="/images/geants/img0.jpg">
-            </li>
-            <li>
-                <img src="/images/geants/img1.jpg">
-            </li>
-            <li>
-                <img src="/images/geants/img2.jpg">
-            </li>
-            <li>
-                <img src="/images/geants/img0.jpg">
-            </li>
-            <li>
-                <img src="/images/geants/img1.jpg">
-            </li>
-            <li>
-                <img src="/images/geants/img2.jpg">
-            </li>
+            @each(img in frontmatter.gallery)
+                <li>
+                    <img src="{{img}}">
+                </li>
+            @end
         </ul>
     </div>
 </main>
