@@ -1,8 +1,10 @@
 @layout('layouts/base')
 
+@set('projects',routes('/projets/*'))
+
 @section('content')
 	<main>
-			@each((project,i) in routes('/projets/*'))
+			@each((project,i) in projects)
 				<a href="{{project.url}}" is="project-card" class="project-card"  ariane-before="slideToLeft" ariane-between="slideFromRight">
 					<picture anim-onscroll>
 						<img src="{{project.data.frontmatter.thumbnail}}" alt="">
@@ -20,7 +22,9 @@
 						</svg>
 					</div>
 				</a>
-				<hr>
+				@if(i < projects.length - 1)
+					<hr>
+				@end
 			@end
 	</main>
 @end

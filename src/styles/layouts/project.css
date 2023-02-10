@@ -51,6 +51,9 @@ footer {
   width: var(--size-fluid-1);
   margin: auto;
   margin-bottom: var(--size-7);
+  & nav{
+    width:100%;
+  }
   & a {
     font-family: var(--font-display);
     font-size: 2rem;

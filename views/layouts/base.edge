@@ -17,9 +17,11 @@
 				</a>
 			</h1>
 			<nav>
-				<ul class="nav" style="--curent-item: {{title==="infos" ? 2 : 0}};">
+				<ul class="nav" style="--curent-item: {{title==="infos" ? (actus.frontmatter.activ ? 2 : 1) : 0}};">
 					<li><a href="{{base}}/" class="nav-item" ariane-router>Projets</a></li>
-					<li><button class="nav-item" id="actuBtn">Actualités</button></li>
+					@if(actus.frontmatter.activ)
+						<li><button class="nav-item" id="actuBtn">Actualités</button></li>
+					@end
 					<li><a href="{{base}}/infos/" class="nav-item" ariane-router>Infos</a></li>
 				</ul>
 			</nav>
@@ -30,11 +32,13 @@
 			<div class="wrapper">
 				<button class="close-btn" id="close-actus">X</button>
 				<h2>Actualités</h2>
-				<em>du 16-02-2023 au 28-03-2023</em>
+				<em>{{actus.frontmatter.legende}}</em>
 				<picture>
-					<img src="/images/crocos-thumbnail.jpg" alt="">
+					<img src="{{actus.frontmatter.thumbnail}}" alt="">
 				</picture>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nostrum corporis eligendi labore voluptate quaerat commodi quo, odit obcaecati. Ipsum dolor soluta dolorem! Repellat aut quaerat beatae dolorum accusantium veritatis.</p>
+				<div class="md-content">
+					{{{actus.content}}}
+				</div>
 			</div>
 		</dialog>
     <script type="module" src="/src/scripts/index.ts"></script>

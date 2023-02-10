@@ -14,18 +14,25 @@ type infosFrontmatter = {
   thumbnail:string
 }
 
-const projects = loadAllMdFilesFrom<ProjectFrontmatter>('content/projets')
+type actusFrontmatter = {
+  thumbnail : string
+  activ:boolean
+  legende:string
+}
 
-const projectsRoutes = loadAllMdFilesFrom<ProjectFrontmatter>('content/projets').map((p)=>({
+const projectsRoutes = loadAllMdFilesFrom<ProjectFrontmatter>('content/projets').map((p,index)=>({
   url:encodeURI('/projets/'+p.filename.replace('.md','')+'/'),
   template:"projet",
   data:{
     frontmatter:p.frontmatter,
-    content:p.content
+    content:p.content,
+    index
   }
 }))satisfies Route[]
 
 const infosPage = loadMdFile<infosFrontmatter>('content/infos.md')
+
+export const actusPage = loadMdFile<actusFrontmatter>('content/actualites.md')
 
 export const routes = (): Route[] => {
   return [
@@ -34,7 +41,6 @@ export const routes = (): Route[] => {
       template: "accueil",
       data: {
         title: "accueil",
-        projects
       },
     },
     {

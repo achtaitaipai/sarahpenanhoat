@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import { dedale } from "vite-plugin-dedale";
-import { routes } from "./ssg/routes";
+import { actusPage, routes } from "./ssg/routes";
 
 export default defineConfig({
   plugins: [
@@ -9,7 +9,7 @@ export default defineConfig({
       templateDir: "views",
       templateEngine: "edge",
       configureTemplateEngine: (env) => {
-        env.global("siteTitle", "Daedalus's Blog");
+        env.global("actus", actusPage);
         return env;
       },
       routes: routes(),
