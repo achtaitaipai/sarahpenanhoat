@@ -20,13 +20,14 @@ collections:
       - {label: "Image de couverture", name: "thumbnail", widget: "image"}
       - {label: "Galerie d'images", name: "gallery", widget: "list", field: {label: Image, name: image, widget: image}}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "infos"
-  label: "Infos"
-  editor:
-    preview: false
-  files:
-    - label: "Infos"
-    name: "infos"
-    file: "content/infos.md"
-    fields:
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "infos" # Used in routes, e.g., /admin/collections/blog
+    label: "Infos" # Used in the UI
+    editor: 
+      preview: false
+    files:
+      - label: "Infos Page"
+        name: "infos"
+        file: "site/content/infos.md"
+        fields:
+          - {label: "Body", name: "body", widget: "markdown"}
+        
