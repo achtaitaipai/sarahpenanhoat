@@ -4,6 +4,7 @@ body {
   grid-template-rows: auto 1fr;
   display: grid;
   align-items: flex-start;
+  overflow-x: hidden;
 }
 
 /* body::after {

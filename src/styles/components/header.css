@@ -30,8 +30,8 @@ header h1 a:hover .letter {
   justify-content: space-between;
   list-style: none;
   padding: 0;
-  --item-width: 7rem;
-  --item-fullwidth: 9rem;
+  --item-width: min(7rem, 25vw);
+  --item-fullwidth: min(9rem, 35vw);
 }
 
 .nav::after {
@@ -54,10 +54,9 @@ header h1 a:hover .letter {
   text-decoration: none;
   background-color: transparent;
   border: 0;
-  width: 9rem;
+  width: var(--item-fullwidth);
   padding: 0;
   font-weight: 700;
-  font-size: 1.5rem;
   cursor: pointer;
   &:where(:hover, :focus-within) {
     animation: pulse 0.3s;
@@ -65,8 +64,15 @@ header h1 a:hover .letter {
 }
 
 @media (min-width: 56em) {
+  /* .nav {
+    --item-width: 7rem;
+    --item-fullwidth: 9rem;
+  } */
   .header-wrapper {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .nav-item {
+    font-size: 1.5rem;
   }
 }
