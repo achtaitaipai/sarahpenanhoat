@@ -7,7 +7,8 @@
 			@each((project,i) in projects)
 				<a href="{{project.url}}" is="project-card" class="project-card"  ariane-before="slideToLeft" ariane-between="slideFromRight">
 					<picture anim-onscroll>
-						<img src="{{project.data.frontmatter.thumbnail}}" alt="">
+						<source srcset="{{image(project.data.frontmatter.thumbnail,{format:'webp'},devmode)}}" alt="">
+						<img src="{{image(project.data.frontmatter.thumbnail,{format:'jpeg'},devmode)}}" alt="">
 					</picture>
 					<div class="description" anim-onscroll>
 					<h2>

@@ -20,7 +20,8 @@
     <div class="grid" is="image-gallery" id="{{frontmatter.date}}-{{frontmatter.title}}">
         @each(img in frontmatter.gallery)
             <picture>
-                <img src="{{img}}">
+                <source srcset="{{image(img,{format:'webp'},devmode)}}" alt="">
+                <img src="{{image(img,{format:'jpeg'},devmode)}}" alt="">
             </picture>
         @end
         <ul>

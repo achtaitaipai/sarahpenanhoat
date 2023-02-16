@@ -33,8 +33,9 @@
 				<button class="close-btn" id="close-actus">X</button>
 				<h2>Actualités</h2>
 				<em>{{actus.frontmatter.legende}}</em>
-				<picture>
-					<img src="{{actus.frontmatter.thumbnail}}" alt="">
+				<picture >
+					<source srcset="{{image(actus.frontmatter.thumbnail,{format:'webp'},devmode)}}" alt="">
+					<img src="{{image(actus.frontmatter.thumbnail,{format:'jpeg'},devmode)}}" alt="">
 				</picture>
 				<div class="md-content">
 					{{{actus.content}}}

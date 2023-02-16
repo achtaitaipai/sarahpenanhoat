@@ -3,7 +3,8 @@
 @section('content')
 <main class="infos">
 	<picture>
-		<img src="{{frontmatter.thumbnail}}" alt="" class="cover">
+		<source srcset="{{image(frontmatter.thumbnail,{format:'webp'},devmode)}}" alt="">
+		<img src="{{image(frontmatter.thumbnail,{format:'jpeg'},devmode)}}" alt="">
 	</picture>
 	<div class="md-content">
 		{{{content}}}
