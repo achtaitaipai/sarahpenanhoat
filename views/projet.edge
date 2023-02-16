@@ -8,7 +8,8 @@
 <main class="project">
     <section class="cover">
         <picture>
-            <img src="{{frontmatter.thumbnail}}" alt="">
+            <source srcset="{{image(frontmatter.thumbnail,{format:'webp'},devmode)}}" alt="">
+            <img src="{{image(frontmatter.thumbnail,{format:'jpeg'},devmode)}}" alt="">
         </picture>
         <div class="text">
             <h2>{{frontmatter.title}}</h2>
