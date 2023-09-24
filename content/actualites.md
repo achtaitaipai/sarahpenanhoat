@@ -1,6 +1,6 @@
 ---
 activ: true
-thumbnail: /images/uploads/1.jpg
-legende: du 16-02-2023 au 28-03-2023
+thumbnail: /images/uploads/348387315_946533199801156_5884472295537106072_n.jpg
+legende: Jusqu'en juillet 2024
 ---
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nostrum corporis eligendi labore voluptate quaerat commodi quo, odit obcaecati. Ipsum dolor soluta dolorem! Repellat aut quaerat beatae dolorum accusantium veritatis.
+En formation à l'IEAC en Alsace pour approfondir mes connaissances en céramique. Ouverte à toutes collaborations.
