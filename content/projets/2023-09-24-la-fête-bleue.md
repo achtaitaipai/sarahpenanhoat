@@ -1,5 +1,5 @@
 ---
-title: La fête bleue
+title: Véro à la fête foraine
 legende: Une collaboration avec Alexis Champion
 resume: Projection vidéo mappée sur structure aluminium et boules à facettes,
   dimensions variables, 2017
