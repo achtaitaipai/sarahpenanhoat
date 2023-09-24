@@ -3,7 +3,7 @@ title: Collaborations
 legende: Depuis 2017
 resume: "Des travaux communs "
 date: 2023-09-24T09:30:19.570Z
-thumbnail: /images/uploads/0.jpg
+thumbnail: /images/uploads/am3.jpg
 gallery:
   - /images/uploads/dsc_0031.jpg
   - /images/uploads/375443310_775251124354509_5073161938600627014_n.jpg
