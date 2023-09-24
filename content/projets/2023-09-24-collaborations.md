@@ -4,6 +4,8 @@ legende: Depuis 2021
 resume: 1 - Une proposition de nappe végétale avec Lina Shlageter
 date: 2023-09-24T09:30:19.570Z
 thumbnail: /images/uploads/0.jpg
+gallery:
+  - /images/uploads/dsc_0031.jpg
 ---
 1 - Une napepde nappe végétale avec Lina Shlageter, collection privée, 2021appe,pp 
 
