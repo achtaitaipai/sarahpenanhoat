@@ -6,6 +6,7 @@ date: 2023-09-24T09:30:19.570Z
 thumbnail: /images/uploads/0.jpg
 gallery:
   - /images/uploads/dsc_0031.jpg
+  - /images/uploads/375596830_263576599908100_6811590011747804847_n.jpg
 ---
 1 - Une napepde nappe végétale avec Lina Shlageter, collection privée, 2021appe,pp 
 
