@@ -1,5 +1,5 @@
 ---
-thumbnail: /images/uploads/portraitsarah.jpg
+thumbnail: /images/uploads/img_6127.jpg
 ---
 \
 Sarah Penanhoat vit et travaille là ou il y a de la terre, des stylos et une licence IV.
